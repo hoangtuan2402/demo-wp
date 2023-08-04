@@ -1,0 +1,495 @@
+.wp-site-blocks .wp-block-section,
+body > .is-root-container,
+.edit-post-visual-editor__post-title-wrapper,
+.wp-block-group.has-background,
+.is-root-container .wp-block[data-align="full"] > .wp-block-group,
+.is-root-container .wp-block[data-align="full"] > .wp-block-cover {
+  padding-left: var(--wp--custom--outer);
+  padding-right: var(--wp--custom--outer);
+  }
+
+
+/* HEADER */
+
+.wp-block-post-title a {
+     display: initial; 
+}
+
+.wp-block-read-more,
+.wp-block-latest-posts a,
+.wp-block-post-title a {
+  background: linear-gradient(0deg, var(--wp--preset--color--body-text), var(--wp--preset--color--body-text)) no-repeat right bottom / 0 var(--bg-h);
+  transition: background-size 350ms;
+    padding-bottom: 1px;
+  --bg-h: 1px;
+}
+
+.wp-block-navigation__responsive-container-content a {
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF) no-repeat right bottom / 0 var(--bg-h);
+  transition: background-size 350ms;
+    padding-bottom: 1px;
+  --bg-h: 1px;
+}
+.wp-block-read-more:where(:hover, :focus-visible),
+.wp-block-latest-posts a:where(:hover, :focus-visible),
+.wp-block-navigation__responsive-container-content a:where(:hover, :focus-visible),
+.wp-block-post-title a:where(:hover, :focus-visible) {
+  background-size: 100% var(--bg-h);
+  background-position-x: left;
+}
+
+.wp-block-read-more,
+.wp-block-latest-posts a,
+.wp-block-navigation__responsive-container-content a,
+.wp-block-post-title a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1043px) {
+  .nf-header-right-content {
+    display: none;
+  }
+  .nf-header-left-content {
+    flex-basis: 100% !important;
+  }
+  .nf-header-left-content .is-layout-flex {
+    justify-content: space-between;
+  }
+}
+
+button.wp-block-search__button.has-icon.wp-element-button {
+  border: none;
+  box-shadow: none;
+}
+
+/* SVG  */
+
+.icon-search {
+  height: 40px;
+  width: 50px;
+  fill: var(--wp--preset--color--body-text);
+  align-items: center;
+} 
+
+
+/* TRENDING NEWS */
+
+.trending-news {
+    position: relative;
+    background: var(--wp--preset--color--secondary);
+    padding-left: 25px;
+    margin-left: 30px;
+    padding-top: 20px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    margin-top: -75px;
+}
+
+li.wp-block-post:not(:has(.wp-block-post-featured-image)) .trending-news{
+  margin-top: 0;
+}
+
+@media screen and (max-width: 992px) {
+
+.trending-news-container .wp-block-post-template.is-flex-container.is-flex-container.columns-3>li {
+    width: 100%;
+}
+}
+
+/* FEATURED POST  */
+
+.featured-post .post-content {
+    max-width: 537px;
+    margin-left: -80px;
+    position: relative;
+    background: var(--wp--preset--color--secondary);
+
+}
+.featured-post .wp-block-post-excerpt__excerpt {
+  line-height: 26px;
+}
+
+/* LATEST POST  */
+
+/*.latest-posts a:where(:not(.wp-element-button)) {
+  text-decoration: none;
+}*/
+.col-sidebar .wp-block-latest-posts.wp-block-latest-posts__list li,
+.latest-post .wp-block-latest-posts.wp-block-latest-posts__list li {
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--wp--preset--color--body-text);
+  padding-bottom: 16px;
+}
+
+.col-sidebar .wp-block-latest-posts.wp-block-latest-posts__list li:last-child,
+.latest-post .wp-block-latest-posts.wp-block-latest-posts__list li:last-child {
+  margin-bottom: 30px;
+  padding-bottom: 16px;
+  border-bottom: none;
+}
+
+
+/* SEARCH FORM */
+
+.nf-search, .overlay {
+  display: none;
+}
+.overlay{
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; 
+}
+.wp-block-search__button {
+  margin-left: unset;
+  border-radius: unset;
+}
+.nf-search .wp-block-search__button:hover {
+  background-color: var(--wp--preset--color--hover);
+  color: #FFF;
+}
+.nf-search {
+  width: 50%;
+  margin: 0 auto;
+  padding: 2px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 999;
+  filter: none;
+  -webkit-filter: none;
+}
+
+.wp-block-search__input {
+  border:  1px solid var(--wp--preset--color--body-text);
+  background-color: var(--wp--preset--color--background);
+  color: var(--wp--preset--color--body-text);
+}
+
+/* COMMENTS */
+
+.wp-block-comments-title {
+  letter-spacing: -0.65px;
+}
+
+/*.single-post .wp-block-post-title {
+  letter-spacing: -0.50px;
+}*/
+
+.comment-reply-title {
+  font-size: 26px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.logged-in-as {
+    font-size: 14px;
+    font-weight: 400
+}
+
+/* CAT LIST  */
+
+.wp-block-post-terms a,
+.wp-block-categories-list a {
+  display: inline-block;
+    font-size: 16px;
+    text-transform: inherit;
+    line-height: 1;
+    color: #FFFFFF !important;
+    font-weight: 400;
+    border: 1px solid c;
+    padding: 3px 14px 3px;
+    border-radius: 50px;
+    margin-right: 7px;
+    margin-bottom: 6px;
+    background: var(--wp--preset--color--tertiary) !important;
+    margin-top: 6px;
+    text-decoration: none;
+
+}
+
+.taxonomy-category.wp-block-post-terms a:hover,
+.wp-block-categories-list a:hover {
+  color: #FFFFFF !important;
+  background: var(--wp--preset--color--hover) !important;
+}
+
+.selected-posts li.wp-block-post {
+  position: relative;
+}
+
+.selected-posts li.wp-block-post .wp-block-post-featured-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.selected-posts li.wp-block-post .wp-block-post-featured-image img {
+  display: block;
+  width: 100%;
+}
+
+.selected-posts li.wp-block-post .post-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 28px;
+}
+
+li.wp-block-post:not(:has(.wp-block-post-featured-image)) .wp-block-group.post-info {
+    position: inherit;
+}
+
+
+/* FOOTER  */
+
+.nf-footer-nav .wp-block-navigation-item:hover span {
+  color: white;
+}
+
+.wp-block-social-links, .wp-block-social-links.has-normal-icon-size {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 781px) {
+  .featured-post .post-content {
+    margin-left: unset;
+  }
+  .nf-footer-content .wp-block-navigation__container,
+  .nf-footer-content .wp-block-social-links{
+    justify-content: center;
+  }
+  .nf-footer-nav {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+#news-fse-to-top {
+  all: unset;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transition: .3s;
+  z-index: 9;
+  height: 50px;
+  width: 50px;
+}
+#news-fse-to-top img{
+  border-radius: 15%;
+}
+
+/* CONTACT FORM */
+input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email {
+  padding: 17px;
+  width: 200px;
+}
+.wpcf7-submit:hover {
+  color: #FFFFFF;
+  background-color: var(--wp--preset--color--hover);
+}
+
+.wpcf7 p {
+  margin-block-start: unset;
+}
+
+.wpcf7-submit {
+    background-color: var(--wp--preset--color--tertiary);
+    color: #FFFFFF;
+    border-radius: 0px;
+    border-width: 0px;
+    border-style: solid;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    line-height: 1;
+    padding-top: 18px;
+    padding-right: 40px;
+    padding-bottom: 19px;
+    padding-left: 40px;
+    text-decoration: none;
+}
+
+
+/* SINGLE POST NAVIGATION  */
+.post-navigation-link__label, .post-navigation-link__title {
+  display: block;
+}
+
+.post-navigation-link-previous .post-navigation-link__label {
+  font-size: 0;
+  visibility: hidden;
+}
+
+.post-navigation-link-previous .post-navigation-link__label::before {
+  font-size: 16px;
+  visibility: visible;
+  content: "< Previous";
+}
+
+.post-navigation-link-next .post-navigation-link__label {
+  font-size: 0;
+  visibility: hidden;
+}
+
+.post-navigation-link-next .post-navigation-link__label::before {
+  font-size: 16px;
+  visibility: visible;
+  content: "Next >";
+}
+
+
+/* SINGLE TEMPLATE SOCIAL MEDIA */
+.single li.wp-social-link.wp-block-social-link {
+  color: var(--wp--preset--color--body-text);
+}
+
+.left-sidebar .sidebar-variation {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.no-sidebar .sidebar-variation .col-content {
+  flex-basis: 100% !important;
+}
+
+.no-sidebar .sidebar-variation .col-sidebar {
+  display: none;
+}
+
+
+/* Pagination */
+.wp-block-query-pagination-numbers a.page-numbers,
+.wp-block-query-pagination-numbers span.page-numbers,
+.wp-block-query-pagination-next,
+.wp-block-query-pagination-previous {
+  height: fit-content;
+  width: fit-content;
+  padding: 5px 15px;
+  margin-left: 5px;
+  background-color: #ffeadc;
+  color: #201e1e;
+  border-radius: 5px;
+}
+.wp-block-query-pagination-numbers a.page-numbers.current,
+.wp-block-query-pagination-numbers span.page-numbers.current,
+.wp-block-query-pagination-numbers a.page-numbers:hover,
+.wp-block-query-pagination-numbers span.page-numbers:hover,
+.wp-block-query-pagination-next:hover,
+.wp-block-query-pagination-previous:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.wp-block-query-pagination-next,
+.wp-block-query-pagination-previous {
+  color: #000000;
+}
+
+.wp-block-query-pagination-next:hover,
+.wp-block-query-pagination-previous:hover {
+  color: #FFFFFF;
+}
+/*
+.wp-block-post-title a {
+display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}*/
+
+ul.wp-block-categories-list.wp-block-categories {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul.wp-block-categories-list.wp-block-categories li {
+    margin-bottom: 5px;
+}
+
+.trending-news-container .wp-block-post-title a {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.3;
+}
+
+.nf-search-icon .wp-block-search__input {
+  display:none ;
+} 
+
+.nf-search-icon button.wp-block-search__button.has-icon.wp-element-button {
+  background: transparent;
+  color: white;
+  font-size: 35px;
+  padding: unset;
+   transform: rotate(270deg);
+}
+
+.wp-block-post-date {
+  position: relative; /* set the position of the date container to relative */
+  padding-left: 25px; /* add some left padding to make space for the icon */
+}
+
+.wp-block-post-date:before {
+  content: "\f073"; /* use the Unicode code for the calendar icon */
+  font-family: "Font Awesome 5 Free"; /* set the font family to Font Awesome */
+  font-weight: 600; /* set the font weight to ensure the icon is visible */
+  position: absolute; /* position the icon absolutely within the date container */
+  left: 0; /* set the left position of the icon to 0 */
+  top: 50%; /* vertically center the icon within the date container */
+  transform: translateY(-50%); /* adjust the position of the icon to center it vertically */
+  font-size: 16px; /* set the size of the icon */
+}
+
+.post-author-icon {
+  color: white;
+  position: relative; /* set the position of the date container to relative */
+  padding-left: 21px; /* add some left padding to make space for the icon */
+}
+
+.post-author-icon:before {
+  content: "\f007"; /* use the Unicode code for the calendar icon */
+  font-family: "Font Awesome 5 Free"; /* set the font family to Font Awesome */
+  font-weight: 600; /* set the font weight to ensure the icon is visible */
+  position: absolute; /* position the icon absolutely within the date container */
+  left: 0; /* set the left position of the icon to 0 */
+  top: 50%; /* vertically center the icon within the date container */
+  transform: translateY(-50%); /* adjust the position of the icon to center it vertically */
+  font-size: 16px; /* set the size of the icon */
+  color: white; /* set the color of the icon */
+}
+
+.post-author-icon-dark {
+  color: var(--wp--preset--color--body-text);
+  position: relative; /* set the position of the date container to relative */
+  padding-left: 21px; /* add some left padding to make space for the icon */
+}
+
+.post-author-icon-dark:before {
+  content: "\f007"; /* use the Unicode code for the calendar icon */
+  font-family: "Font Awesome 5 Free"; /* set the font family to Font Awesome */
+  font-weight: 600; /* set the font weight to ensure the icon is visible */
+  position: absolute; /* position the icon absolutely within the date container */
+  left: 0; /* set the left position of the icon to 0 */
+  top: 50%; /* vertically center the icon within the date container */
+  transform: translateY(-50%); /* adjust the position of the icon to center it vertically */
+  font-size: 16px; /* set the size of the icon */
+  color: var(--wp--preset--color--body-text); /* set the color of the icon */
+}
+
+.cat-date-container {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}

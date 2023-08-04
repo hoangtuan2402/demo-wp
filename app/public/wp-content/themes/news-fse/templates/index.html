@@ -1,0 +1,41 @@
+<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header"} /-->
+
+<!-- wp:group {"tagName":"main","align":"full","style":{"spacing":{"margin":{"top":"70px"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group alignfull" style="margin-top:70px"><!-- wp:group {"align":"full","className":"wp-block-section","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull wp-block-section"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|70","left":"var:preset|spacing|70"}}},"className":"sidebar-variation"} -->
+<div class="wp-block-columns sidebar-variation"><!-- wp:column {"verticalAlignment":"top","width":"75%","className":"col-content"} -->
+<div class="wp-block-column is-vertically-aligned-top col-content" style="flex-basis:75%">
+	<!-- wp:query {"queryId":15,"query":{"perPage":"6","pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"displayLayout":{"type":"list","columns":3}} -->
+<div class="wp-block-query"><!-- wp:post-template -->
+<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide"><!-- wp:post-featured-image {"isLink":true,"align":"wide"} /-->
+
+<!-- wp:group {"style":{"spacing":{"padding":{"left":"30px","bottom":"30px","top":"30px","right":"30px"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px"><!-- wp:post-title {"isLink":true} /-->
+
+<!-- wp:post-excerpt {"moreText":"Read More"} /--></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+<!-- /wp:post-template -->
+
+<!-- wp:query-pagination {"paginationArrow":"chevron","align":"left","layout":{"type":"flex","justifyContent":"center"},"fontSize":"semi-medium"} -->
+<!-- wp:query-pagination-previous {"label":""} /-->
+
+<!-- wp:query-pagination-numbers /-->
+
+<!-- wp:query-pagination-next /-->
+<!-- /wp:query-pagination --></div>
+<!-- /wp:query -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"top","width":"25%","style":{"spacing":{"blockGap":"var:preset|spacing|60"}},"className":"col-sidebar"} -->
+<div class="wp-block-column is-vertically-aligned-top col-sidebar" style="flex-basis:25%">
+<!-- wp:template-part {"slug":"sidebar","theme":"news-fse"} /-->
+</div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->
